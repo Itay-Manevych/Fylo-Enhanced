@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="styles/stylesheet.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
   <title>Fylo data storage component</title>
 </head>
 
-<body class="floating-sections">
+<body class="floating-sections flex-align-items">
 
     <div class="floating-sections">
-      <div class = "shape border-radius">
+      <div class = "shape1 border-radius">
         <div class="flex flex-column flex-justify-content height shape1-containter ">
 
           <div class="flex">
@@ -27,7 +26,36 @@
 
         </div>
       </div>
-      <div class = "shape">
+
+      <div class = "shape2">
+        <div class="flex flex-column flex-justify-content height shape2-container">
+          <p>
+            You've used
+             <b>815 GB</b> 
+          of your storage
+          </p>
+
+          <div class="loading-shape flex flex-justify-content-start flex-align-items">
+            <div class="loading-shape-color flex flex-align-items flex-justify-content-end">
+              <div class="white-dot">
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-justify-content-between">
+            <p>0 GB</p>
+            <p>1000 GB</p>
+        
+          </div>
+        </div>
+      </div>
+
+      <div class="bubble">
+        <div class="flex flex-align-items flex-justify-content-center height text-bubble-container">
+          <div class="text-bubble1">
+            <b class="text-bubble2 ">185</b> GB Left
+          </div>
+        </div>
       </div>
 
     </div>

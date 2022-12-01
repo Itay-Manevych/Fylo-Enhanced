@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 *{
     font-family: 'Raleway';
-    font-size: 22.4px;
+    font-size: 13px;
     color: white;
 }
 
@@ -19,17 +20,24 @@ body{
 .floating-sections{
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
     gap: 32px;
 }
 
-.shape{
+.shape1{
     width: 325px;
     height: 200px;
     background-color: hsl(228, 56%, 26%);
     border-radius: 5%;
 } 
+
+.shape2{
+    width:500px;
+    height: 150px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 5%;
+}
 
 .border-radius{
     border-top-right-radius: 35%; 
@@ -49,6 +57,18 @@ body{
 
 .flex-justify-content{
     justify-content: center;
+}
+
+.flex-justify-content-start{
+    justify-content: flex-start;
+}
+
+.flex-justify-content-end{
+    justify-content: flex-end;
+}
+
+.flex-justify-content-between{
+    justify-content: space-between;
 }
 
 .shape1-containter{
@@ -77,4 +97,87 @@ button:hover{
 button:active
 {
     background-color: hsl(228, 56%, 26%);
+}
+
+.height{
+    height: 100%;
+}
+
+.width{
+    width: 100%;
+}
+
+.loading-shape{
+    background-color: hsl(229, 57%, 11%);
+    height: 10%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.loading-shape-color{
+    height: 85%;
+    width: 81.5%;
+    background-image: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    border-radius: 20px;
+    margin-left: 1px;
+}
+
+.white-dot{
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 0.7px;
+}
+
+.shape2-container{
+    width:80%;
+    padding-left: 10%;
+}
+
+.bubble {
+    position: absolute;
+    top : 250px;
+    right : 340px;
+    background: white;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 120px;
+    text-align: center;
+    width: 170px;
+    height: 75px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    padding: 0px;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent white transparent transparent;
+    bottom: -20px;
+    left: 94.25%;
+    margin-left: -10px;
+}
+
+.text-bubble-container{
+    padding-left: 20%;
+}
+
+.text-bubble1{
+    font-size: medium;
+    font-weight: 400;
+    color:hsl(229, 57%, 11%);
+}
+
+.text-bubble2{
+    font-size: xx-large;
+    font-weight: bold;
+    color: hsl(229, 57%, 11%);
 }
