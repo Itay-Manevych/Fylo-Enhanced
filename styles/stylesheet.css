@@ -34,3 +34,47 @@ body{
 .border-radius{
     border-top-right-radius: 35%; 
 }
+
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-align-items{
+    align-items: center;
+}
+
+.flex-justify-content{
+    justify-content: center;
+}
+
+.shape1-containter{
+    padding-left: 10%;
+    gap: 40px;
+    height: 100%;
+}
+
+.buttons-containter{
+    gap:15px;
+}
+
+button{
+    background-color: hsl(229, 57%, 11%);
+    border: 0;
+    border-radius: 25%;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:active
+{
+    background-color: hsl(228, 56%, 26%);
+}
