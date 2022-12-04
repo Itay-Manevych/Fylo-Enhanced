@@ -37,6 +37,7 @@ body{
     height: 150px;
     background-color: hsl(228, 56%, 26%);
     border-radius: 5%;
+    position:relative;
 }
 
 .border-radius{
@@ -137,8 +138,8 @@ button:active
 
 .bubble {
     position: absolute;
-    top : 250px;
-    right : 340px;
+    top : -95px;
+    right : 0px;
     background: white;
     color: #FFFFFF;
     font-family: Arial;
