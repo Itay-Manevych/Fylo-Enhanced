@@ -7,7 +7,7 @@
 
 body{
     background-color: hsl(229, 57%, 11%);
-    background-image: url("/Fylo-FronedMentor-Challenge/assets/bg-desktop.png");
+    background-image: url("/Fylo-Enhanced/assets/bg-desktop.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center bottom;
@@ -73,9 +73,8 @@ body{
 }
 
 .shape1-containter{
-    padding-left: 10%;
+    padding-left: 3rem;
     gap: 40px;
-    height: 100%;
 }
 
 .buttons-containter{
@@ -86,9 +85,12 @@ button{
     background-color: hsl(229, 57%, 11%);
     border: 0;
     border-radius: 25%;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:hover{
@@ -138,8 +140,8 @@ button:active
 
 .bubble {
     position: absolute;
-    top : -95px;
-    right : 0px;
+    top : -25%;
+    right : 50px;
     background: white;
     color: #FFFFFF;
     font-family: Arial;
@@ -147,7 +149,7 @@ button:active
     line-height: 120px;
     text-align: center;
     width: 170px;
-    height: 75px;
+    height: 70px;
     border-radius: 10px;
     border-bottom-right-radius: 0;
     padding: 0px;
@@ -168,17 +170,26 @@ button:active
 }
 
 .text-bubble-container{
-    padding-left: 20%;
+    padding-left: 10%;
 }
 
 .text-bubble1{
     font-size: medium;
     font-weight: 400;
     color:hsl(229, 57%, 11%);
+    display:flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .text-bubble2{
     font-size: xx-large;
     font-weight: bold;
     color: hsl(229, 57%, 11%);
+}
+
+span{
+    margin: 0;
+    padding: 0;
+
 }
