@@ -26,18 +26,26 @@ body{
 }
 
 .shape1{
-    width: 325px;
+    width: 27.5rem;
     height: 200px;
     background-color: hsl(228, 56%, 26%);
     border-radius: 5%;
 } 
 
 .shape2{
-    width:500px;
+    width:50rem;
     height: 150px;
     background-color: hsl(228, 56%, 26%);
     border-radius: 5%;
     position:relative;
+    margin: 0;
+    margin-top: 3.45%;
+}
+
+.shape2-container{
+    width:90%;
+    padding-left: 5%;
+    margin-right: 0;
 }
 
 .border-radius{
@@ -112,13 +120,13 @@ button:active
 
 .loading-shape{
     background-color: hsl(229, 57%, 11%);
-    height: 10%;
+    height: 1.35rem;
     width: 100%;
     border-radius: 20px;
 }
 
 .loading-shape-color{
-    height: 85%;
+    height: 86.5%;
     width: 81.5%;
     background-image: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
     border-radius: 20px;
@@ -130,18 +138,13 @@ button:active
     height: 12px;
     background-color: white;
     border-radius: 50%;
-    margin-right: 0.7px;
-}
-
-.shape2-container{
-    width:80%;
-    padding-left: 10%;
+    margin-right: 0.185rem;
 }
 
 .bubble {
     position: absolute;
     top : -25%;
-    right : 50px;
+    right : 35px;
     background: white;
     color: #FFFFFF;
     font-family: Arial;
@@ -165,29 +168,38 @@ button:active
     border-width: 0 20px 20px 0;
     border-color: transparent white transparent transparent;
     bottom: -20px;
-    left: 94.25%;
+    left: 94%;
     margin-left: -10px;
 }
-
+.amount-used{
+    letter-spacing: 0.05em;
+}
 .text-bubble-container{
     padding-left: 10%;
 }
 
-.text-bubble1{
+.text-bubble{
     font-size: medium;
     font-weight: 400;
     color:hsl(229, 57%, 11%);
-    display:flex;
-    justify-content: space-between;
     gap: 10px;
 }
 
-.text-bubble2{
+.inner-text{
     font-size: xx-large;
     font-weight: bold;
     color: hsl(229, 57%, 11%);
 }
 
+.inner-text2{
+    color: gray;
+    margin: 0;
+    padding-top: 0.25rem;
+    padding-right: 0.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 1000;
+}
 span{
     margin: 0;
     padding: 0;
