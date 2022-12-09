@@ -16,7 +16,9 @@ body{
     height: 100vh;
     width: 100%;
 }
-
+.margin{
+    margin-bottom: 10rem;
+}
 .floating-sections{
     display: flex;
     flex-direction: row;
@@ -46,6 +48,10 @@ body{
     width:90%;
     padding-left: 5%;
     margin-right: 0;
+}
+
+.margin-bottom{
+    margin-bottom: 10rem;
 }
 
 .border-radius{
@@ -127,10 +133,12 @@ button:active
 
 .loading-shape-color{
     height: 86.5%;
-    width: 81.5%;
+    width: 0;
     background-image: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
     border-radius: 20px;
     margin-left: 1px;
+    margin-right: 1px;
+    transition: width 1s;
 }
 
 .white-dot{
@@ -171,11 +179,11 @@ button:active
     left: 94%;
     margin-left: -10px;
 }
-.amount-used{
+.space-used{
     letter-spacing: 0.05em;
 }
 .text-bubble-container{
-    padding-left: 10%;
+    padding-left: 20%;
 }
 
 .text-bubble{
@@ -203,5 +211,5 @@ button:active
 span{
     margin: 0;
     padding: 0;
-
+    font-size: small;
 }
