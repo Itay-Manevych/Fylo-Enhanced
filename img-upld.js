@@ -9,7 +9,7 @@ const regexPattern = /([a-zA-Z0-9\s_\\.\-\(\):])+(png|jpg|jpeg|gif)$/i;
 const conversion = 1024*1024;
 
 let usedSpace = 0;
-let fileCount = 0;
+let fileSize = 0;
 
 // updating the loading bar and the amount
 const storageUpdate= ()=>{
@@ -42,7 +42,7 @@ realFileBtn.addEventListener("change", ()=>{
 
         else{
             const currentFileCount = realFileBtn.files.length;
-            let fileSize = 0;
+            fileSize = 0;
 
             for (let i = 0; i < currentFileCount; i++) {
                 fileSize += (realFileBtn.files[i].size) / conversion // 1 mb = 1024*1024 bytes
