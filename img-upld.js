@@ -48,7 +48,7 @@ realFileBtn.addEventListener("change", ()=>{
                 fileSize += (realFileBtn.files[i].size) / conversion // 1 mb = 1024*1024 bytes
             }
             
-            if(JSON.parse(localStorage.getItem("space")) + fileSize >= 10)
+            if(JSON.parse(localStorage.getItem("space")) + fileSize > 10)
             {
                 customTxt.innerHTML = "Upload Image";
                 setTimeout(()=>alert("There is not enough space on the disk"), 1);
