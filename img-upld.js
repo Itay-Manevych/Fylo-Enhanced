@@ -1,19 +1,13 @@
-const realFileBtn = document.getElementById("real-file");
+const fileInput = document.getElementById("file-input");
 const customBtn = document.getElementById("custom-button");
 const customTxt = document.getElementById("custom-text");
-const amountUsed = document.getElementById("amount-used");
-const amountLeft = document.getElementById("amount-left");
-const loadingBar = document.getElementById("loading-shape-color");
-
-const regexPattern = /([a-zA-Z0-9\s_\\.\-\(\):])+(png|jpg|jpeg|gif)$/i;
-const conversion = 1024*1024;
-
-let usedSpace = 0;
-let fileSize = 0;
 
 // updating the loading bar and the amount
-const storageUpdate= ()=>{
-    const width = (JSON.parse(localStorage.getItem("space")) / 10) * 583;
+const storageUpdate = (usedSpace)=>{
+    const amountUsed = document.getElementById("amount-used");
+    const amountLeft = document.getElementById("amount-left");
+    const loadingBar = document.getElementById("loading-shape-color");
+    const width = (usedSpace / 10) * 583;
     loadingBar.style.width = width + "px";
     const usedSpaceString = localStorage.getItem("space").slice(0,4); // sliced only to 2 numbers after the dot
     amountUsed.innerHTML = usedSpaceString + " MB";
@@ -23,49 +17,52 @@ const storageUpdate= ()=>{
 // if the page has been refreshed then keep the amount
 if(JSON.parse(localStorage.getItem("space")) > 0)
 {
-    storageUpdate();
+    storageUpdate(JSON.parse(localStorage.getItem("space")));
 }
 
 // open the file explorer when the custom button is clicked
 customBtn.addEventListener("click", ()=>{
-    realFileBtn.click();
+    fileInput.click();
 })
 
-// change the custom text 
-realFileBtn.addEventListener("change", ()=>{
-    if(realFileBtn.value){
+const onFileInputChange = (event)=>{
+    const regexPattern = /([a-zA-Z0-9\s_\\.\-\(\):])+(png|jpg|jpeg|gif)$/i;
+    if(event.value){
 
-        if(!(realFileBtn.value.match(regexPattern))) // checking file format
+        if(!(event.value.match(regexPattern))) // checking file format
         {
             customTxt.innerHTML = "File format isn't supported"
         }
 
         else{
-            const currentFileCount = realFileBtn.files.length;
-            fileSize = 0;
+            let usedSpace = 0;
+            let currentFileSize = 0;
+            const usedFileSize = JSON.parse(localStorage.getItem("space"));
+            const conversion = 1024*1024;
+            const currentFileCount = event.files.length;
 
             for (let i = 0; i < currentFileCount; i++) {
-                fileSize += (realFileBtn.files[i].size) / conversion // 1 mb = 1024*1024 bytes
+                currentFileSize += (event.files[i].size) / conversion // 1 mb = 1024*1024 bytes
             }
             
-            if(JSON.parse(localStorage.getItem("space")) + fileSize > 10)
+            if(usedFileSize + currentFileSize > 10)
             {
                 customTxt.innerHTML = "Upload Image";
                 setTimeout(()=>alert("There is not enough space on the disk"), 1);
                 return;
             }
 
-            usedSpace = JSON.parse(localStorage.getItem("space")) + fileSize;
+            usedSpace = usedFileSize + currentFileSize;
             localStorage.setItem("space", usedSpace);
 
-            storageUpdate();
+            storageUpdate(usedSpace);
 
             if(currentFileCount > 1)
             {
                 return customTxt.innerHTML = "Upload completed";
             }
 
-            customTxt.innerHTML =  realFileBtn.value.slice(12, 29);  // remove fakepath
+            customTxt.innerHTML =  event.value.slice(12, 29);  // remove fakepath
         }
     }
 
@@ -73,7 +70,9 @@ realFileBtn.addEventListener("change", ()=>{
     else{
         customTxt.innerHTML = "Upload Image";
     }
-})
+}
+// change the custom text 
+//fileInput.addEventListener("change", onFileInputChange(this));
 
 
 
