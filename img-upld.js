@@ -25,6 +25,7 @@ customBtn.addEventListener("click", ()=>{
     fileInput.click();
 })
 
+// change the size and update the html
 const onFileInputChange = (event)=>{
     const regexPattern = /([a-zA-Z0-9\s_\\.\-\(\):])+(png|jpg|jpeg|gif)$/i;
     if(event.value){
@@ -71,8 +72,7 @@ const onFileInputChange = (event)=>{
         customTxt.innerHTML = "Upload Image";
     }
 }
-// change the custom text 
-//fileInput.addEventListener("change", onFileInputChange(this));
+
 
 
 
