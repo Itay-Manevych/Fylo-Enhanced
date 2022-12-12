@@ -18,7 +18,7 @@
             <img src=".//assets/logo.svg"/>
           </div>
 
-          <input type="file" id="file-input" multiple hidden onchange="onFileInputChange(this)"/>
+          <input type="file" id="file-input" onchange="onFileInputChange(this)"  onclick="this.value=null;" multiple hidden/>
 
           <div class="flex buttons-containter">
             <button> <img src="./assets/icon-document.svg"/> </button>
